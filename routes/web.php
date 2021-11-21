@@ -29,6 +29,7 @@ Route::prefix('admin')->group(function () {
     Route::get('posts/{id}/edit', [AdminPostsController::class, 'edit'])->name('admin.posts.edit');
     Route::patch('posts/{post}',[AdminPostsController::class,'update'])->name('admin.posts.update');
     Route::post('posts',[AdminPostsController::class,'store'])->name('admin.posts.store');
+    Route::delete('posts/{post}',[AdminPostsController::class,'destroy'])->name('admin.posts.destroy');
 });
 
 
